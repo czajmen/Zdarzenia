@@ -22,26 +22,52 @@ public class PainterView extends View {
     public PainterView(Context context) {
         super(context);
 
-        punkty = new ArrayList<>();
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setColor(getResources().getColor(R.color.colorAccent));
+        paint.setStrokeWidth(5);
+        paint.setStyle(Paint.Style.FILL);
+
+        punkty = new ArrayList<>();
+
     }
 
     public PainterView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        punkty = new ArrayList<>();
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setColor(getResources().getColor(R.color.colorAccent));
+        paint.setStrokeWidth(5);
+        paint.setStyle(Paint.Style.FILL);
+
+        punkty = new ArrayList<>();
     }
 
     public PainterView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        punkty = new ArrayList<>();
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setColor(getResources().getColor(R.color.colorAccent));
+        paint.setStrokeWidth(5);
+        paint.setStyle(Paint.Style.FILL);
+
+        punkty = new ArrayList<>();
     }
 
     public PainterView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        punkty = new ArrayList<>();
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setColor(getResources().getColor(R.color.colorAccent));
+        paint.setStrokeWidth(5);
+        paint.setStyle(Paint.Style.FILL);
+
+        punkty = new ArrayList<>();
+        punkty = new ArrayList<>();
     }
 
     @Override
@@ -58,5 +84,10 @@ public class PainterView extends View {
     public void addPoint(PointF potint)
     {
             punkty.add(potint);
+    }
+
+    public void clear() {
+        punkty.clear();
+        invalidate();
     }
 }

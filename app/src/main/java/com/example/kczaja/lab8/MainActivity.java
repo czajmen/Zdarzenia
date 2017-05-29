@@ -31,17 +31,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 0:{
                 Intent intent = new Intent(getApplication(), TouchActvity.class);
                 startActivity(intent);
+                break;
 
             }
             case 1:
             {
                 Intent intent = new Intent(getApplication(), GestureActvity.class);
                 startActivity(intent);
+                break;
             }
             case 2:
             {
                     Intent intent = new Intent(getApplication(), PainterActivity.class);
                 startActivity(intent);
+                break;
             }
         }
 

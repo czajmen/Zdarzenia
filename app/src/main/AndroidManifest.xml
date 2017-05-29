@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".TouchActvity" />
         <activity android:name=".GestureActvity" />
-        <activity android:name=".PainterActivity"></activity>
+        <activity android:name=".PainterActivity"
+            android:configChanges="orientation|screenSize"></activity>
     </application>
 
 </manifest>
